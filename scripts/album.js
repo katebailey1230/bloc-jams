@@ -108,7 +108,9 @@ var updateSeekBarWhileSongPlays = function() {
              currentSoundFile.bind('timeupdate', function(event) {
                  var seekBarFillRatio = this.getTime() / this.getDuration();
                  var $seekBar = $('.seek-control .seek-bar');
-
+var setCurrentTimeInPlayerBar = function(currentTime) {
+    currentTime.find('.current-time').text()
+}
                  updateSeekPercentage($seekBar, seekBarFillRatio);
              });
          }
